@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <h1 class="text-center">Motivation</h1>
+
+  <!-- bootstrap grid to center the card -->
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <!-- Single Card for Both Sections -->
+      <div class="card">
+        <div class="card-body custom-card-body" style="max-height: 400px;">
+          <div class="row">
+            <!-- 3 Columns for Orange Color -->
+            <div class="col-md-3 rectangle col3-rectangle">
+              <div class="mb-3 text-white">
+                <img src="assets/Ei_light.png" alt="Image Description" style="width: 61px;
+                height: 60.321px;
+                flex-shrink: 0; margin-bottom: 100px;" />
+                <p class="mb-0 text-center col3-text">Would you mind taking a moment to share your thoughts?</p>
+                <img src="assets/Buddy_Big.png" alt="Image Description" class="img-fluid w-50"
+                  style="margin-top: 250px; width: 77.804px; height: 120.13px; flex-shrink: 0;" />
+              </div>
+            </div>
+
+
+            <!-- 9 Columns for the Questions Part -->
+            <div class="col-md-9 col9-rectangle">
+              <!-- Bootstrap Card -->
+              <div class="card">
+                <div class="card-body custom-card-body">
+                  <p class="mb-3 text-center question-header">How confident are you about answering questions correctly
+                    in today's session?.</p>
+                  <p class="mb-3 text-center question-header">You can give any rating from 1 to 10, 1 being the least
+                    confident and 10 being the most confident.</p>
+                  <form>
+                    <!-- incluing from .ts -->
+                    <div class="row">
+                      <div *ngFor="let rating of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" class="col-md-1 text-center">
+                        <div class="rating-box" [class.selected]="selectedRating === rating"
+                          (click)="selectRating(rating)">
+                          {{ rating }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="mb-3 text-center question-header" style="padding-top: 50px;">How confident are you that
+                      you can:</p>
+                    <div *ngFor="let question of questionnaireData" class="form-group question-header"
+                      style="padding-top: 20px; padding-left: 85px;">
+                      <label>{{ question.question }}</label>
+                      <div class="row">
+                        <div *ngFor="let option of question.options" class="col-md-2 option-box text-center">
+                          <input type="radio"
+                            class="row radio-height mx-auto form-check-input border-orange border-5 p-2 rounded-full"
+                            [name]="question.name" [value]="option" />
+                          <label class="form-check-label">{{ option }}</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-orange w-100 mt-3">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

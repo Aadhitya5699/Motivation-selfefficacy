@@ -1,0 +1,73 @@
+.radio-height {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+  
+  .question-header {
+    color: #333;
+    font-family: Gotham Book;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .col3-text {
+    color: #FFF;
+    font-family: Gotham Book;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .border-orange {
+    border-color: #F9851C;
+  }
+  
+  .btn-orange {
+    background-color: #F9851C;
+    height: 46px;
+    flex-shrink: 0;
+  }
+  
+  .option-box {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px 0;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+  }
+  .col9-rectangle{
+    width: 874px;
+   height: 716.93px;
+    flex-shrink: 0;
+  }
+  
+  .col3-rectangle {
+    height: 716.93px;
+    background: linear-gradient(to right, #166598, #52AEE0, #D9EFFF);
+    border: 6px solid #DEE2EB;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rating-box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .selected {
+    background-color: #f9851c; 
+    color: #fff; 
+  }
+  
